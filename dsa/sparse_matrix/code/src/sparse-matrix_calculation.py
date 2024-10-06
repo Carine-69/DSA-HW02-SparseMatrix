@@ -94,9 +94,10 @@ class matrix:
 
 if __name__ == "__main__":
     matrix_a = matrix()
-    matrix_a.sparse(filePath="C:/Users/LENOVO/OneDrive/Desktop/DSA-HW02-SparseMatrix/dsa/sparse_matrix/sample_inputs/sample-matrix.txt")
+    matrix_b = matrix()
+    matrix_a.sparse(filePath="dsa/sparse_matrix/sample_inputs/matrixfile3.txt")
+    matrix_b.sparse(filePath="dsa/sparse_matrix/sample_inputs/matrixfile1.txt")
+    added_matrix = matrix_a.add_data(matrix_b)
 
-    added_matrix = matrix_a.add_data(matrix_a)
-
-    output_file_path = "C:/Users/LENOVO/OneDrive/Desktop/DSA-HW02-SparseMatrix/dsa/sparse_matrix/sample_inputs/output-matrix.txt"
+    output_file_path = "dsa/sparse_matrix/sample_inputs/output-matrix.txt"
     added_matrix.save_to_file(output_file_path)
